@@ -1,11 +1,3 @@
-/*
- * Copyright (c) 2012-2018 Red Hat, Inc.
- * This program and the accompanying materials are made
- * available under the terms of the Eclipse Public License 2.0
- * which is available at https://www.eclipse.org/legal/epl-2.0/
- *
- * SPDX-License-Identifier: EPL-2.0
- */
 package edu.pku.sei.wusj.ide.view;
 
 import com.google.gwt.core.client.Callback;
@@ -19,7 +11,7 @@ import com.google.gwt.http.client.URL;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
-import edu.pku.sei.wusj.ide.HelloWorldResources;
+import edu.pku.sei.wusj.ide.ApiRecommendatorResources;
 import edu.pku.sei.wusj.ide.common.Constants;
 import org.eclipse.che.ide.api.editor.EditorAgent;
 import org.eclipse.che.ide.api.editor.texteditor.ContentInitializedHandler;
@@ -29,12 +21,11 @@ import org.eclipse.che.ide.api.parts.base.BasePresenter;
 import org.eclipse.che.ide.util.loging.Log;
 import org.vectomatic.dom.svg.ui.SVGResource;
 
-/** @author Mathias Schaefer <mathias.schaefer@eclipsesource.com> */
 @Singleton
-public class HelloWorldViewPresenter extends BasePresenter
-    implements HelloWorldView.ActionDelegate {
+public class ApiRecommendatorViewPresenter extends BasePresenter
+    implements ApiRecommendatorView.ActionDelegate {
 
-  private final HelloWorldView helloWorldView;
+  private final ApiRecommendatorView apiRecommendatorView;
   private final String url = "http://localhost:9090/api/index.jsp";
   private final EditorAgent editorAgent;
   private String queryContent;
@@ -117,13 +108,14 @@ public class HelloWorldViewPresenter extends BasePresenter
             }
           });
     } catch (Exception e) {
-      Log.info(HelloWorldViewPresenter.class, e.getStackTrace());
+      Log.info(ApiRecommendatorViewPresenter.class, e.getStackTrace());
     }
   }
 
   @Inject
-  public HelloWorldViewPresenter(final HelloWorldView helloWorldView, EditorAgent editorAgent) {
-    this.helloWorldView = helloWorldView;
+  public ApiRecommendatorViewPresenter(
+      final ApiRecommendatorView apiRecommendatorView, EditorAgent editorAgent) {
+    this.apiRecommendatorView = apiRecommendatorView;
     this.editorAgent = editorAgent;
     ScriptInjector.fromUrl(GWT.getModuleBaseURL() + Constants.JAVASCRIPT_FILE_ID)
         .setWindow(ScriptInjector.TOP_WINDOW)
@@ -131,13 +123,14 @@ public class HelloWorldViewPresenter extends BasePresenter
             new Callback<Void, Exception>() {
               @Override
               public void onSuccess(final Void result) {
-                Log.info(HelloWorldViewPresenter.class, Constants.JAVASCRIPT_FILE_ID + " loaded.");
+                Log.info(
+                    ApiRecommendatorViewPresenter.class, Constants.JAVASCRIPT_FILE_ID + " loaded.");
               }
 
               @Override
               public void onFailure(final Exception e) {
                 Log.error(
-                    HelloWorldViewPresenter.class,
+                    ApiRecommendatorViewPresenter.class,
                     "Unable to load " + Constants.JAVASCRIPT_FILE_ID,
                     e);
               }
@@ -146,7 +139,7 @@ public class HelloWorldViewPresenter extends BasePresenter
   }
 
   public void sayHello(String content) {
-    this.helloWorldView.sayHello(content);
+    this.apiRecommendatorView.sayHello(content);
   }
 
   @Override
@@ -156,12 +149,12 @@ public class HelloWorldViewPresenter extends BasePresenter
 
   @Override
   public SVGResource getTitleImage() {
-    return (HelloWorldResources.INSTANCE.icon());
+    return (ApiRecommendatorResources.INSTANCE.icon());
   }
 
   @Override
   public View getView() {
-    return helloWorldView;
+    return apiRecommendatorView;
   }
 
   @Override
@@ -171,6 +164,6 @@ public class HelloWorldViewPresenter extends BasePresenter
 
   @Override
   public void go(AcceptsOneWidget container) {
-    container.setWidget(helloWorldView);
+    container.setWidget(apiRecommendatorView);
   }
 }

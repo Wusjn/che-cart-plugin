@@ -6,8 +6,8 @@
  *
  * SPDX-License-Identifier: EPL-2.0
  */
-function HelloWorld(element, contents) {
+function ApiRecommendator(element, contents) {
   element.style.overflow = "scroll";
-   element.innerHTML = contents;
+  element.innerHTML = contents;
 };
 
