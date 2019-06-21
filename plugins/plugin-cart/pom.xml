@@ -12,17 +12,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <artifactId>plugin-cart</artifactId>
+        <artifactId>plugin-parent</artifactId>
         <groupId>edu.pku.sei.wusj</groupId>
         <version>6.16.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-    <groupId>edu.pku.sei.wusj</groupId>
-    <artifactId>plugin-cart-assembly-parent</artifactId>
-    <packaging>pom</packaging>
-    <name>Plugin Cart :: Che Assembly :: Assembly Parent</name>
-  <modules>
-    <module>assembly-ide-war</module>
-    <module>assembly-main</module>
-  </modules>
+    <artifactId>plugin-cart-parent</artifactId>
+        <packaging>pom</packaging>
+        <name>Plugin Cart :: Plugin Cart :: Parent</name>
+        <modules>
+            <module>plugin-cart-ide</module>
+        </modules>
 </project>

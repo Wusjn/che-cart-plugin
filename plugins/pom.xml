@@ -14,15 +14,15 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <artifactId>plugin-embedjs-sample</artifactId>
-    <groupId>org.eclipse.che.sample</groupId>
-    <version>6.19.0-SNAPSHOT</version>
+    <artifactId>plugin-cart</artifactId>
+    <groupId>edu.pku.sei.wusj</groupId>
+    <version>6.16.0</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
   <artifactId>plugin-parent</artifactId>
   <packaging>pom</packaging>
-  <name>Plugin Embed JavaScript :: Plugins :: Parent</name>
+  <name>Plugin Cart :: Plugins :: Parent</name>
   <modules>
-    <module>plugin-embedjs</module>
+    <module>plugin-cart</module>
   </modules>
 </project>

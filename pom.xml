@@ -16,12 +16,11 @@
         <groupId>org.eclipse.che.depmgt</groupId>
         <version>6.19.0-SNAPSHOT</version>
     </parent>
-    <groupId>org.eclipse.che.sample</groupId>
-    <artifactId>plugin-embedjs-sample</artifactId>
-    <version>6.19.0-SNAPSHOT</version>
+    <groupId>edu.pku.sei.wusj</groupId>
+    <artifactId>plugin-cart</artifactId>
+    <version>6.16.0</version>
     <packaging>pom</packaging>
-    <name>Plugin Embed JavaScript :: Parent pom</name>
-    <url>https://www.eclipse.org/che/</url>
+    <name>Plugin cart :: Parent pom</name>
     <licenses>
         <license>
             <name>Eclipse Public License 2.0</name>
@@ -29,44 +28,38 @@
             <distribution>repo</distribution>
         </license>
     </licenses>
-    <scm>
-        <connection>scm:git:git@github.com:che-samples/che-plugin-embedjs.git</connection>
-        <developerConnection>scm:git:git@github.com:che-samples/che-plugin-embedjs.git</developerConnection>
-        <tag>HEAD</tag>
-        <url>https://github.com/che-samples/che-plugin-embedjs</url>
-    </scm>
     <properties>
-        <che.version>6.19.0-SNAPSHOT</che.version>
+        <che.version>6.16.0</che.version>
     </properties>
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>org.eclipse.che.sample</groupId>
+                <groupId>edu.pku.sei.wusj</groupId>
                 <artifactId>assembly-ide-war</artifactId>
                 <version>${project.version}</version>
                 <type>war</type>
             </dependency>
             <dependency>
-                <groupId>org.eclipse.che.sample</groupId>
+                <groupId>edu.pku.sei.wusj</groupId>
                 <artifactId>assembly-wsagent-server</artifactId>
                 <version>${project.version}</version>
                 <type>tar.gz</type>
             </dependency>
             <dependency>
-                <groupId>org.eclipse.che.sample</groupId>
+                <groupId>edu.pku.sei.wusj</groupId>
                 <artifactId>assembly-wsagent-war</artifactId>
                 <version>${project.version}</version>
                 <type>war</type>
             </dependency>
             <dependency>
-                <groupId>org.eclipse.che.sample</groupId>
+                <groupId>edu.pku.sei.wusj</groupId>
                 <artifactId>assembly-wsmaster-war</artifactId>
                 <version>${project.version}</version>
                 <type>war</type>
             </dependency>
             <dependency>
-                <groupId>org.eclipse.che.sample</groupId>
-                <artifactId>plugin-embedjs-ide</artifactId>
+                <groupId>edu.pku.sei.wusj</groupId>
+                <artifactId>plugin-cart-ide</artifactId>
                 <version>${project.version}</version>
                 <type>gwt-lib</type>
             </dependency>

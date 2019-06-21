@@ -23,7 +23,7 @@
             <outputDirectory>tomcat/webapps</outputDirectory>
             <outputFileNameMapping>ROOT.war</outputFileNameMapping>
             <includes>
-                <include>org.eclipse.che.sample:assembly-ide-war</include>
+                <include>edu.pku.sei.wusj:assembly-ide-war</include>
             </includes>
         </dependencySet>
     </dependencySets>
