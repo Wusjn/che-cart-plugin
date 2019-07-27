@@ -13,4 +13,4 @@ Description of mounted volumes:
 - `/assembly` - path to your Che assembly-main files location (note that it has to point to the unwrapped Che files in `target/<eclipse-che-version>/<eclipse-che-version>` of assembly-main)
 
 Example of running this command
-`docker run -it --rm -v /home/user/che-data/:/data -v /home/user/che-plugin-cart/assembly/assembly-main/target/eclipse-che-6.16.0/eclipse-che-6.16.0:/assembly -v /var/run/docker.sock:/var/run/docker.sock eclipse/che:6.16.0 start`
+`docker run -it --rm -v /home/user/che-data/:/data -v /home/user/che-cart-plugin/assembly/assembly-main/target/eclipse-che-6.16.0/eclipse-che-6.16.0:/assembly -v /var/run/docker.sock:/var/run/docker.sock eclipse/che:6.16.0 start`
